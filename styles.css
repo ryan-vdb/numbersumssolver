@@ -1,0 +1,235 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  margin: 20px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.grid-size-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+  
+.arrow-buttons {
+  display: flex;
+  flex-direction: column; /* stack buttons vertically */
+  gap: 4px;
+}
+  
+.arrow-buttons button {
+  font-size: 8px;
+  border: 1px solid #aaa;
+  background-color: #eee;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  height: 12px;
+  width: 24px;
+}
+  
+.arrow-buttons button:hover {
+  background-color: #ddd;
+}
+
+#gridContainer table {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+  
+input {
+  margin: 0;
+  padding: 0;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  font-size: 26px;
+  text-align: center;
+  background-color: #fff;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.row-sum {
+  width: 46px;
+  height: 46px;
+  font-size: 18px;
+  margin: 2px;
+  margin-right: 8px;
+  text-align: center;
+  background-color: #eee;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.col-sum {
+  width: 46px;
+  height: 46px;
+  font-size: 18px;
+  margin: 2px;
+  margin-bottom: 8px;
+  text-align: center;
+  background-color: #eee;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; 
+  appearance: textfield;
+}
+
+.main-layout {
+  display: flex;
+  align-items: flex-start;
+}
+    
+  
+#colorKey {
+  width: 60px; 
+  position: fixed;
+  left: 20px;
+  top: 180px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #eee;
+  border-color: #ccc;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  align-items: center;
+}
+       
+#gridContainer {
+  margin: 0 auto;
+}
+    
+.color-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+    
+.color-box {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #333;
+  cursor: pointer;
+  border-radius: 4px;
+}
+    
+.color-box.selected {
+  outline: 2px solid black;
+}
+    
+.color-input {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+}
+
+#solveContainer {
+  margin-top: 20px;
+}
+    
+#solveButton {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #bbb;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+    
+#solveButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: white;
+}
+
+#solveButton:not(:disabled):hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+#solutionContainer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+    
+#solutionGrid table {
+  margin: 0 auto;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+    
+#solutionGrid td {
+  border: 1px solid #ccc;
+  width: 50px;
+  height: 50px;
+  font-size: 26px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+}
+    
+.readonly-cell {
+  pointer-events: none;
+  user-select: none;
+  width: 50px;
+  height: 50px;
+  font-size: 26px;
+  text-align: center;
+  background-color: #fff;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+  

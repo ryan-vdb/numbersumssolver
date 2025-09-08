@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puzzle Solver</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="title">Number Sums Solver</div>
+  <div class="subtitle">by Ryan Van de Berghe</div>
+  <div class="grid-size-selector">
+    <span>Grid Size: </span>
+    <span id="gridSizeDisplay">5</span>
+    <div class="arrow-buttons">
+      <button id="increaseGrid">▲</button>
+      <button id="decreaseGrid">▼</button>
+    </div>
+  </div>
+  <div class="main-layout">
+    <div id="colorKey"></div>
+    <div id="gridContainer"></div>
+  </div>
+  <div id="solveContainer">
+    <button id="solveButton" disabled>Solve</button>
+  </div>
+  <div id="solutionContainer">
+    <div id="solutionLabel" style="display: none; font-weight: bold; font-size: 20px;">Solution:</div>
+    <div id="solutionGrid"></div>
+  </div>
+  <script src="dist/script.js"></script>
+</body>
+</html>
