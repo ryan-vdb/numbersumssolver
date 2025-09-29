@@ -6,7 +6,7 @@ const decreaseBtn = document.getElementById("decreaseGrid")!;
 const gridContainer = document.getElementById("gridContainer")!; // a <div> for your table
 const solveButton = document.getElementById("solveButton") as HTMLButtonElement;
 
-const colorList = ["#FFB1B1","#FFE1BC","#FBF0B7","#C3F1CB","#C0DCFF","#D4CBFE","#FFB8EF","#EFCEC2"];
+const colorList = ["#FFB1B1","#FFE1BC","#FBF0B7","#C3F1CB","#C0DCFF","#D4CBFE","#FFB8EF","#EFCEC2","#E6E6E6"];
 let selectedColor: string | null = null;
 
 createColorKey();
@@ -15,9 +15,12 @@ generateGrid(gridSize); // initial grid
 display.textContent = String(gridSize);
 
 increaseBtn.addEventListener("click", () => {
-  gridSize++;
-  display.textContent = String(gridSize);
-  generateGrid(gridSize);
+  if (gridSize < 9) {
+    gridSize++;
+    display.textContent = String(gridSize);
+    generateGrid(gridSize);
+    createColorKey();
+  }
 });
 
 decreaseBtn.addEventListener("click", () => {
@@ -25,6 +28,7 @@ decreaseBtn.addEventListener("click", () => {
     gridSize--;
     display.textContent = String(gridSize);
     generateGrid(gridSize);
+    createColorKey();
   }
 });
 
@@ -154,7 +158,9 @@ function createColorKey() {
   const keyContainer = document.getElementById("colorKey")!;
   keyContainer.innerHTML = "";
 
-  colorList.forEach(color => {
+  const colorsShow = colorList.slice(0, gridSize);
+
+  colorsShow.forEach(color => {
     const wrapper = document.createElement("div");
     wrapper.className = "color-option";
 

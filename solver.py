@@ -105,3 +105,6 @@ def solve():
     print("SOLUTION GRID:")
     print(solution_grid)
     return jsonify({"solution": solution_grid})
+
+if __name__ == "__main__":
+    app.run(debug=True)
