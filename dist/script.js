@@ -5,7 +5,7 @@ const increaseBtn = document.getElementById("increaseGrid");
 const decreaseBtn = document.getElementById("decreaseGrid");
 const gridContainer = document.getElementById("gridContainer"); // a <div> for your table
 const solveButton = document.getElementById("solveButton");
-const colorList = ["#FFB1B1", "#FFE1BC", "#FBF0B7", "#C3F1CB", "#C0DCFF", "#D4CBFE", "#FFB8EF", "#EFCEC2", "#E6E6E6"];
+const colorList = ["#FFB1B1", "#C0DCFF", "#FBF0B7", "#D4CBFE", "#FFE1BC", "#FFB8EF", "#C3F1CB", "#EFCEC2", "#CCF0F9"];
 let selectedColor = null;
 createColorKey();
 generateGrid(gridSize); // initial grid
